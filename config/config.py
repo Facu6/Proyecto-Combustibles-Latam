@@ -13,7 +13,8 @@ DATA_RAW_DIR = os.getenv('DATA_RAW_DIR', 'data/raw')
 DATA_PROCESSED_DIR = os.getenv('DATA_PROCESSED_DIR', 'data/processed')
 # Carpeta para archivos temporales
 TMP_DIR = os.getenv('TMP_DIR', 'tmp')
-
+# Nombre de archivo de datos unificados
+DATA_UNITY = os.getenv('DATA_UNITY', 'combustibles_latam.csv')
 
 # ===== ARGENTINA =====
 # URL para automatizar la descarga
@@ -37,8 +38,14 @@ CL_DATASET_RAW_PATH = os.path.join(DATA_RAW_DIR, CL_DATASET_FILENAME)
 
 # ===== PERÚ =====
 PE_DATASET_URL = os.getenv('PE_DATASET_URL')
-PE_DATASET_FILENAME = os.getenv('PE_DATASET_FILENAME', 'preciosPeru.pdf')
-PE_DATASET_RAW_PATH = os.path.join(DATA_RAW_DIR, PE_DATASET_FILENAME)
+PE_DATASET_FILENAME_RAW = os.getenv('PE_DATASET_FILENAME', 'preciosPeru.pdf')
+PE_DATASET_FILENAME_PROCESSED = os.getenv('PE_DATASET_FILENAME', 'preciosPeru.csv')
+PE_DATASET_RAW_PATH = os.path.join(DATA_RAW_DIR, PE_DATASET_FILENAME_RAW)
 
+# ===== URL API =====
+URL_API_OER = os.getenv('URL_API_OER')
+
+# ===== API KEY ===== (cargada en "transformation")
+API_KEY_OER = os.getenv('API_KEY_OER')
 
 
