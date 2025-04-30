@@ -13,8 +13,9 @@ DATA_RAW_DIR = os.getenv('DATA_RAW_DIR', 'data/raw')
 DATA_PROCESSED_DIR = os.getenv('DATA_PROCESSED_DIR', 'data/processed')
 # Carpeta para archivos temporales
 TMP_DIR = os.getenv('TMP_DIR', 'tmp')
-# Nombre de archivo de datos unificados
+# Nombre de archivo de datos unificados  
 DATA_UNITY_PROCESSED = os.getenv('DATA_UNITY_PROCESSED', 'combustibles_latam.csv')
+DATA_UNITY = os.getenv('DATA_UNITY', 'combustibles_latam.csv')
 
 # ===== ARGENTINA =====
 # URL para automatizar la descarga
@@ -62,7 +63,3 @@ BQ_TABLE_UNITY = os.getenv('BQ_TABLE_UNITY')
 BUCKET_NAME_LATAM = os.getenv('BUCKET_NAME_LATAM')
 # Credencial Google (JSON)
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
-
-
-
-

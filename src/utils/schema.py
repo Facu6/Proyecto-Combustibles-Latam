@@ -6,6 +6,9 @@ from pandera import Column, DataFrameSchema, Check
 from google.cloud import bigquery
 
 
+import pandera as pa
+from pandera import Column, DataFrameSchema, Check
+
 schema_argentina = DataFrameSchema({
     'pais' : Column(pa.String, nullable=False),
     'fecha' : Column(pa.DateTime, nullable=False),
@@ -35,7 +38,6 @@ schema_peru = DataFrameSchema({
     'precio_litro' : Column(pa.Float, Check.ge(0), nullable=False),
     'precio_usd_litro' : Column(pa.Float, Check.ge(0), nullable=False)
 })
-
 
  # Definimos el schema esperado por la tabla en BigQuery
 schema_bigquery = [

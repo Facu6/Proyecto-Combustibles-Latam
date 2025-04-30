@@ -1,0 +1,17 @@
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos temporales y caché
+__pycache__/
+*.pyc 
+
+# Carpeta de logs
+logs/
+
+# Datos sin procesar y archivos pesados
+data/raw/
+data/processed/
+tmp/
+
+# Entorno virtual
+combustibles_venv
