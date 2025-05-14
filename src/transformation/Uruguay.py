@@ -43,6 +43,9 @@ def procesar_datos_Uruguay(
         df['precio_litro'] = pd.to_numeric(df['precio_litro'], errors='coerce').astype(float) 
         df['fecha'] = pd.to_datetime(df['fecha'], dayfirst=True, errors='coerce') 
 
+        # 7.1 Conversión de formato: de "1111" a "11.11"
+        df['precio_litro'] = df['precio_litro'] / 100
+    
         # 8. Obtener cotización del dolar para "UYU"
         tasa = obtener_cotizaciones('UYU')
         
